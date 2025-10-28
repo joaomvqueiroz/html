@@ -4,7 +4,7 @@
 // ==============================================================================
 $servername = "localhost";
 $username = "web_user"; // O utilizador que criou
-$password = "SUA_PASSWORD_FORTE"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
+$password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
 $dbname = "sabor_do_mar";
 
 // ==============================================================================
@@ -14,10 +14,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar a ligação
 if ($conn->connect_error) {
+    // Em ambiente de produção, este erro só deve ser visível para o administrador
     die("Erro na ligação à Base de Dados: " . $conn->connect_error);
 }
 
-// QUERY ATUALIZADA: Seleciona TODAS as reservas, ordenadas da mais RECENTE para a mais ANTIGA
+// QUERY FINAL: Seleciona TODAS as reservas, ordenadas pela data mais RECENTE.
 $sql = "SELECT id, nome, email, telefone, data, hora, pessoas, data_criacao 
         FROM reservas 
         ORDER BY data DESC, hora DESC";
@@ -51,6 +52,7 @@ $result = $conn->query($sql);
             color: white;
             text-transform: uppercase;
         }
+        /* Cor de fundo para linhas pares */
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
@@ -63,8 +65,11 @@ $result = $conn->query($sql);
             text-align: center;
             font-weight: bold;
         }
+        /* Estilo para destacar reservas que já passaram */
         .passado {
-            background-color: #f7dddd; /* Destaca reservas passadas */
+            background-color: #f7dddd; 
+            color: #888;
+            font-style: italic;
         }
     </style>
 </head>

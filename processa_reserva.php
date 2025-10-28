@@ -3,8 +3,8 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
-$username = "web_user"; // O utilizador que criou no Passo 2
-$password = "SUA_PASSWORD_FORTE"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
+$username = "web_user"; // O utilizador que criou
+$password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
 $dbname = "sabor_do_mar";
 
 // Variáveis para a mensagem de feedback
@@ -19,14 +19,12 @@ if ($conn->connect_error) {
     // Se houver erro de ligação, termina e informa
     $mensagem = "❌ Erro na ligação à Base de Dados. Por favor, tente novamente mais tarde.";
     $sucesso = false;
-    // Em ambiente de produção, não deve mostrar o erro técnico
-    // $mensagem .= " Detalhe Técnico: " . $conn->connect_error; 
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ==============================================================================
     // 2. PROCESSAR E VALIDAR DADOS DO FORMULÁRIO
     // ==============================================================================
     
-    // Obter dados, assumindo que já foram validados pelo HTML (required)
+    // Obter dados do POST
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
     $telefone = trim($_POST['telefone']);
@@ -34,7 +32,7 @@ if ($conn->connect_error) {
     $hora = trim($_POST['hora']);
     $pessoas = (int)$_POST['pessoas'];
 
-    // Validação básica (pode expandir esta secção)
+    // Validação básica
     if (empty($nome) || empty($data) || empty($hora) || $pessoas < 1) {
         $mensagem = "❌ Por favor, preencha todos os campos obrigatórios corretamente.";
         $sucesso = false;
@@ -66,7 +64,6 @@ if ($conn->connect_error) {
             } else {
                 // Erro na execução
                 $mensagem = "❌ Erro ao submeter a reserva. Por favor, tente novamente.";
-                // $mensagem .= " Detalhe Técnico: " . $stmt->error; 
                 $sucesso = false;
             }
 
