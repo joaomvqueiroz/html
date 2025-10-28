@@ -30,6 +30,34 @@
             <h2>Reservas e Informações</h2>
             <p>Estamos disponíveis para reservas de terça a domingo, das 10h às 22h.</p>
             
+            <div style="background: #f0f8ff; padding: 20px; border-radius: 5px; border: 1px solid #1976D2; margin-bottom: 20px;">
+                <h3>Faça a sua Reserva Online</h3>
+                <form action="processa_reserva.php" method="POST">
+                    <label for="nome" style="font-weight: bold;">Nome Completo:</label><br>
+                    <input type="text" id="nome" name="nome" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+                    
+                    <label for="email" style="font-weight: bold;">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                    <label for="telefone" style="font-weight: bold;">Telefone:</label><br>
+                    <input type="tel" id="telefone" name="telefone" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                    <label for="data" style="font-weight: bold;">Data da Reserva:</label><br>
+                    <input type="date" id="data" name="data" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                    <label for="hora" style="font-weight: bold;">Hora da Reserva (10:00 - 22:00):</label><br>
+                    <input type="time" id="hora" name="hora" required min="10:00" max="22:00" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+                    
+                    <label for="pessoas" style="font-weight: bold;">Nº de Pessoas:</label><br>
+                    <input type="number" id="pessoas" name="pessoas" min="1" max="20" required style="width: 100%; padding: 10px; margin-bottom: 25px; border: 1px solid #ccc; border-radius: 4px;"><br>
+
+                    <button type="submit" style="background-color: #FF9800; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1.1em; width: 100%;">
+                        Confirmar Reserva
+                    </button>
+                </form>
+            </div>
+            <hr>
+
             <h3>Reservas por Telefone:</h3>
             <p>Ligue-nos durante o nosso horário de funcionamento:</p>
             <p style="font-size: 1.5em; font-weight: bold;"><a href="tel:+351211234567">+351 211 234 567</a></p>

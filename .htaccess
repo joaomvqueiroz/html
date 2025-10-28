@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "Acesso Restrito - Sabor do Mar Reservas"
+AuthUserFile /etc/httpd/.htpasswd
+Require valid-user
+
+<Files reservas_admin.php>
+    Require valid-user
+</Files>
