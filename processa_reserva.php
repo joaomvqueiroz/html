@@ -4,7 +4,7 @@
 // ==============================================================================
 $servername = "localhost";
 $username = "web_user"; // O utilizador que criou no Passo 2
-$password = "SUA_PASSWORD_FORTE"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
+$password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
 $dbname = "sabor_do_mar";
 
 // Variáveis para a mensagem de feedback
