@@ -3,7 +3,11 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
+<<<<<<< HEAD
 $username = "web_user"; // O utilizador que criou
+=======
+$username = "web_user"; // O utilizador que criou no Passo 2
+>>>>>>> 3730c7cbd9901e97f80832122cccb9804955b5c1
 $password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
 $dbname = "sabor_do_mar";
 
