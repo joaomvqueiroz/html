@@ -3,8 +3,8 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
-$username = "GSJ"; // O utilizador que criou
-$password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
+$username = "root";
+$password = "atec123"; 
 $dbname = "sabor_do_mar";
 
 // ==============================================================================
@@ -33,19 +33,18 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor do Mar | Painel de Reservas</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos específicos para o painel de administração */
-        table {
+        .admin-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
         th {
             background-color: #0D47A1; /* Azul Escuro */
@@ -53,28 +52,35 @@ $result = $conn->query($sql);
             text-transform: uppercase;
         }
         /* Cor de fundo para linhas pares */
-        tr:nth-child(even) {
+        .admin-table tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        .data {
-            font-weight: bold;
-            color: #1976D2;
-            white-space: nowrap;
-        }
-        .pessoas {
-            text-align: center;
-            font-weight: bold;
-        }
-        /* Estilo para destacar reservas que já passaram */
-        .passado {
-            background-color: #f7dddd; 
-            color: #888;
-            font-style: italic;
+        .admin-table th, .admin-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Header Fixo com Navegação -->
+    <header class="sticky-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="sabor_do_mar2.png" alt="Sabor do Mar Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservas_admin.php">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header antigo, mantido para o título da página -->
+    <header style="background: #f0f4f8; color: #0A1C29; min-height: auto; padding: 20px 0; border: none; box-shadow: none;">
         <div class="container">
             <h1>Sabor do Mar</h1>
             <p>Painel de Gestão de Reservas</p>
@@ -89,8 +95,8 @@ $result = $conn->query($sql);
             <?php
             if ($result->num_rows > 0) {
                 // Início da Tabela
-                echo "<table>";
-                echo "<tr>
+                echo "<table class='admin-table'>";
+                echo "<thead><tr>
                         <th>ID</th>
                         <th>Data</th>
                         <th>Hora</th>
@@ -98,7 +104,8 @@ $result = $conn->query($sql);
                         <th>Nome</th>
                         <th>Contacto (Email/Tel.)</th>
                         <th>Submetido em</th>
-                      </tr>";
+                      </tr></thead>";
+                echo "<tbody>";
 
                 // Obter a data e hora atual para destacar reservas passadas
                 $agora = time();
@@ -126,7 +133,7 @@ $result = $conn->query($sql);
                 }
 
                 // Fim da Tabela
-                echo "</table>";
+                echo "</tbody></table>";
             } else {
                 echo "<p style='padding: 20px; background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba;'>";
                 echo "Não existem reservas registadas na base de dados.";

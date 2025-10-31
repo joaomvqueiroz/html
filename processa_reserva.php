@@ -3,8 +3,8 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
-$username = "GSJ"; // O utilizador que criou
-$password = "atec123"; // <<<<<< OBRIGATÓRIO: MUDAR PARA A SUA PASSWORD
+$username = "root"; 
+$password = "atec123"; 
 $dbname = "sabor_do_mar";
 
 // Variáveis para a mensagem de feedback
