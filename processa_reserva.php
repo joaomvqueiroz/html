@@ -91,37 +91,50 @@ if (isset($conn)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor do Mar | Confirmação de Reserva</title>
     <link rel="stylesheet" href="style.css"> 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Vídeo de Fundo -->
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="sabor_do_mar.mp4" type="video/mp4">
+        O seu navegador não suporta vídeos em HTML5.
+    </video>
+
+    <!-- Header Fixo com Navegação -->
+    <header class="sticky-header">
         <div class="container">
-            <h1>Sabor do Mar</h1>
-            <p>Confirmação de Reserva</p>
+            <a href="index.html" class="logo">
+                <img src="sabor_do_mar2.png" alt="Sabor do Mar Logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="especiais.html">especiais</a></li>
+                    <li><a href="contacto.html">Contacto e Reservas</a></li>
+                </ul>
+                <ul class="nav-icons">
+                    <li><a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#" class="nav-icon"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#" class="nav-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="nav-icon"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="menu.html">Menu Completo</a></li>
-                <li><a href="sobrenos.html">Sobre Nós</a></li>
-                <li><a href="contacto.html">Contacto e Reservas</a></li>
-            </ul>
-        </div>
-    </nav>
     
     <div class="container">
         <div class="content-section">
             <h2 style="color: <?php echo $sucesso ? '#4CAF50' : '#F44336'; ?>;"><?php echo $sucesso ? 'Reserva Confirmada' : 'Problema na Reserva'; ?></h2>
             <p style="font-size: 1.1em;"><?php echo $mensagem; ?></p>
-            
             <hr>
-            
-            <p>
-                <a href="contacto.html" style="margin-right: 15px;">Voltar para o Formulário de Reservas</a>
-                <a href="menu.html">Ver o Menu Completo</a>
-            </p>
+            <a href="contacto.html" class="btn-primary" style="margin-right: 15px;">Nova Reserva</a>
+            <a href="index.html" class="btn-primary">Voltar ao Início</a>
         </div>
     </div>
 

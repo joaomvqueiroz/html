@@ -517,6 +517,34 @@ footer {
 .admin-table .passado { background-color: #e9ecef; color: #6c757d; }
 .admin-table .data { color: #0077B6; }
 
+/* --- ESTILOS PARA A PÁGINA DE CONTACTO --- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Formulário ocupa 2/3, info 1/3 */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.info-column {
+    background-color: #F0F4F8;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.info-column h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0A1C29;
+    margin-top: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.info-column p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* --- ESTILOS PARA A PÁGINA DE ESPECIAIS --- */
 .fullpage-video-section {
     position: relative;
