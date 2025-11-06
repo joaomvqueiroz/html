@@ -70,28 +70,21 @@ $result = $conn->query($sql);
                 <img src="assets/images/sabor_do_mar2.png" alt="Sabor do Mar Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="reservas_admin.php" style="color: #FF9800;">Admin</a></li>
-                    <li><a href="index.html">Sair</a></li>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li> <!-- Botão para voltar ao início -->
+                    <li><a href="menu.html">Menu</a></li> <!-- Link para o menu -->
+                    <li><a href="reservas_admin.php" style="color: #FF9800;">Admin</a></li> <!-- Página atual -->
+                    <li><a href="index.html">Sair</a></li> <!-- Botão para "cancelar" e voltar ao index -->
                 </ul>
             </nav>
-        </div>
-    </header>
-
-    <!-- Header antigo, mantido para o título da página -->
-    <header style="background: #f0f4f8; color: #0A1C29; min-height: auto; padding: 20px 0; border: none; box-shadow: none;">
-        <div class="container">
-            <h1>Sabor do Mar</h1>
-            <p>Painel de Gestão de Reservas</p>
         </div>
     </header>
 
     <div class="container">
         
         <div class="content-section">
-            <h2>Todas as Reservas (Ordenadas por Data Recente)</h2>
+            <h2>Painel de Gestão de Reservas</h2>
+            <p>Todas as reservas registadas, ordenadas da mais recente para a mais antiga.</p>
             
             <?php
             if ($result->num_rows > 0) {
