@@ -73,7 +73,8 @@ $result = $conn->query($sql);
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="reservas_admin.php">Admin</a></li>
+                    <li><a href="reservas_admin.php" style="color: #FF9800;">Admin</a></li>
+                    <li><a href="index.html">Sair</a></li>
                 </ul>
             </nav>
         </div>
