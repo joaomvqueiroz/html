@@ -162,8 +162,8 @@ header nav ul li a:hover {
     justify-content: center;
     text-align: center;
     color: white;
-    /* A imagem de fundo agora é um fallback, caso o vídeo não carregue */
-    background: url('hero-mar.jpg') no-repeat center center/cover; 
+    /* A imagem de fundo agora é um fallback, caso o vídeo não carregue. O caminho foi atualizado. */
+    background: url('../images/hero-mar.jpg') no-repeat center center/cover; 
     overflow: hidden; /* Garante que o vídeo não ultrapassa a secção */
 }
 

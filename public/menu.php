@@ -1,45 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor do Mar | Menu Completo</title>
-    <link rel="stylesheet" href="style.css"> 
-    <!-- Google Fonts: Lora (Serif) e Montserrat (Sans-Serif) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- NOVAS FONTES: Montserrat, Poppins, Lato -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Vídeo de Fundo -->
-    <video autoplay loop muted playsinline id="background-video">
-        <source src="sabor_do_mar.mp4" type="video/mp4">
-        O seu navegador não suporta vídeos em HTML5.
-    </video>
-
-    <!-- Header Fixo com Navegação (Consistente com o resto do site) -->
-    <header class="sticky-header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="sabor_do_mar2.png" alt="Sabor do Mar Logo">
-            </a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">início</a></li>
-                    <li><a href="menu.html">MENU</a></li>
-                    <li><a href="especiais.html">especiais</a></li>
-                    <li><a href="contacto.html">Contacto e Reservas</a></li>
-                </ul>
-                <ul class="nav-icons">
-                    <li><a href="#" class="nav-icon"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="#" class="nav-icon"><i class="fas fa-search"></i></a></li>
-                    <li><a href="#" class="nav-icon"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" class="nav-icon"><i class="fab fa-instagram"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<?php 
+$page_title = 'Sabor do Mar | Menu Completo';
+include 'header.php'; 
+?>
     
     <div class="container">
         
@@ -47,7 +9,7 @@
             <h2><i class="fas fa-concierge-bell"></i>Entradas</h2>
             <div class="menu-highlights-grid">
                 <div class="menu-card">
-                    <img src="sopa_peixe.jpg" alt="Sopa de Peixe" loading="lazy">
+                    <img src="assets/images/sopa_peixe.jpg" alt="Sopa de Peixe" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Sopa de Peixe</h4>
                         <p class="price">6.50€</p>
@@ -55,7 +17,7 @@
                     </div>
                 </div>
                 <div class="menu-card">
-                    <img src="ameijoas.jpg" alt="Amêijoas à Bulhão Pato" loading="lazy">
+                    <img src="assets/images/ameijoas.jpg" alt="Amêijoas à Bulhão Pato" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Amêijoas à Bulhão Pato</h4>
                         <p class="price">12.50€</p>
@@ -64,7 +26,7 @@
                 </div>
                 <!-- NOVO PRATO PETISCOS -->
                 <div class="menu-card">
-                    <img src="petiscos.png" alt="Petiscos de Camarão" loading="lazy">
+                    <img src="assets/images/petiscos.png" alt="Petiscos de Camarão" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Camarão Panado Crocante</h4>
                         <p class="price">9.50€</p>
@@ -78,7 +40,7 @@
             <h2><i class="fas fa-fish"></i>Pratos Principais</h2>
             <div class="menu-highlights-grid">
                 <div class="menu-card">
-                    <img src="peixe.jpg" alt="Robalo Grelhado" loading="lazy">
+                    <img src="assets/images/peixe.jpg" alt="Robalo Grelhado" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Robalo Grelhado</h4>
                         <p class="price">18.00€</p>
@@ -86,7 +48,7 @@
                     </div>
                 </div>
                 <div class="menu-card">
-                    <img src="arroz_marisco.jpg" alt="Arroz de Marisco" loading="lazy">
+                    <img src="assets/images/arroz_marisco.jpg" alt="Arroz de Marisco" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Arroz de Marisco (Mín. 2 Pessoas)</h4>
                         <p class="price">25.00€ / Pessoa</p>
@@ -95,7 +57,7 @@
                 </div>
                 <div class="menu-card">
                     <!-- Usar uma imagem placeholder quando não houver uma específica -->
-                    <img src="cataplana.jpg" alt="Cataplana de Peixe à Algarvia" loading="lazy">
+                    <img src="assets/images/cataplana.jpg" alt="Cataplana de Peixe à Algarvia" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Cataplana de Peixe à Algarvia</h4>
                         <p class="price">19.00€</p>
@@ -103,7 +65,7 @@
                     </div>
                 </div>
                 <div class="menu-card">
-                    <img src="risoto.jpg" alt="Risoto de Cogumelos" loading="lazy">
+                    <img src="assets/images/risoto.jpg" alt="Risoto de Cogumelos" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Risoto de Cogumelos (Vegetariano)</h4>
                         <p class="price">14.00€</p>
@@ -112,7 +74,7 @@
                 </div>
                 <!-- NOVO PRATO 1 -->
                 <div class="menu-card">
-                    <img src="1.jpg" alt="Mariscada Sabor do Mar" loading="lazy">
+                    <img src="assets/images/1.jpg" alt="Mariscada Sabor do Mar" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Mariscada 'Sabor do Mar'</h4>
                         <p class="price">45.00€ / 2 Pessoas</p>
@@ -121,7 +83,7 @@
                 </div>
                 <!-- NOVO PRATO 2 -->
                 <div class="menu-card">
-                    <img src="2.jpg" alt="Polvo à Lagareiro" loading="lazy">
+                    <img src="assets/images/2.jpg" alt="Polvo à Lagareiro" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Polvo à Lagareiro</h4>
                         <p class="price">22.00€</p>
@@ -130,7 +92,7 @@
                 </div>
                 <!-- NOVO PRATO 3 -->
                 <div class="menu-card">
-                    <img src="3.png" alt="Tagliatelle do Mar" loading="lazy">
+                    <img src="assets/images/3.png" alt="Tagliatelle do Mar" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Tagliatelle do Mar</h4>
                         <p class="price">19.50€</p>
@@ -139,7 +101,7 @@
                 </div>
                 <!-- NOVO PRATO LAGOSTA -->
                 <div class="menu-card">
-                    <img src="lagosta.png" alt="Lagosta Grelhada" loading="lazy">
+                    <img src="assets/images/lagosta.png" alt="Lagosta Grelhada" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Lagosta Grelhada na Brasa</h4>
                         <p class="price">35.00€</p>
@@ -148,7 +110,7 @@
                 </div>
                 <!-- NOVO PRATO SALMÃO -->
                 <div class="menu-card">
-                    <img src="salmao.png" alt="Salmão Grelhado" loading="lazy">
+                    <img src="assets/images/salmao.png" alt="Salmão Grelhado" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Salmão Grelhado com Legumes</h4>
                         <p class="price">20.50€</p>
@@ -162,7 +124,7 @@
             <h2><i class="fas fa-ice-cream"></i>Sobremesas</h2>
             <div class="menu-highlights-grid">
                 <div class="menu-card">
-                    <img src="musse.jpg" alt="Mousse de Lima" loading="lazy">
+                    <img src="assets/images/musse.jpg" alt="Mousse de Lima" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Mousse de Lima</h4>
                         <p class="price">4.50€</p>
@@ -171,7 +133,7 @@
                 </div>
                 <!-- NOVO PRATO TORTA -->
                 <div class="menu-card">
-                    <img src="torTA.JPG" alt="Cheesecake de Morango" loading="lazy">
+                    <img src="assets/images/cheesecake.webp" alt="Cheesecake de Morango" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Cheesecake de Morango</h4>
                         <p class="price">5.50€</p>
@@ -180,7 +142,7 @@
                 </div>
                 <!-- NOVO PRATO PUDIM -->
                 <div class="menu-card">
-                    <img src="PUDIM.JPG" alt="Pudim Flan" loading="lazy">
+                    <img src="assets/images/PUDIM.JPG" alt="Pudim Flan" loading="lazy">
                     <div class="menu-card-content">
                         <h4>Pudim Flan Tradicional</h4>
                         <p class="price">4.00€</p>
@@ -192,20 +154,4 @@
         
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="newsletter-form">
-                <h4>Receba a Sugestão do Chef</h4>
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="O seu melhor e-mail" required>
-                    <button type="submit">Subscrever</button>
-                </form>
-            </div>
-            <p style="font-size: 0.8em; margin-bottom: 5px;">
-                <a href="reservas_admin.php" style="color: #FF9800; text-decoration: none;">Acesso Admin</a>
-            </p>
-            <p>&copy; 2025 Sabor do Mar | Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
+<?php include 'footer.php'; ?>

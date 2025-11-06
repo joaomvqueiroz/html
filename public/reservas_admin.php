@@ -3,8 +3,8 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
-$username = "admin";
-$password = "atec123";
+$username = "root";
+$password = "atec123"; 
 $dbname = "sabor_do_mar";
 
 // ==============================================================================
@@ -33,12 +33,14 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor do Mar | Painel de Reservas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Adicione aqui os ícones Font Awesome para consistência */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
         /* Estilos específicos para o painel de administração */
         .admin-table {
             width: 100%;
@@ -67,7 +69,7 @@ $result = $conn->query($sql);
     <header class="sticky-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="sabor_do_mar2.png" alt="Sabor do Mar Logo">
+                <img src="assets/images/sabor_do_mar2.png" alt="Sabor do Mar Logo">
             </a>
             <nav>
                 <ul>
