@@ -90,7 +90,7 @@ if (isset($conn)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor do Mar | Confirmação de Reserva</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="assets/css/style.css"> 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,7 +101,7 @@ if (isset($conn)) {
 <body>
     <!-- Vídeo de Fundo -->
     <video autoplay loop muted playsinline id="background-video">
-        <source src="sabor_do_mar.mp4" type="video/mp4">
+        <source src="assets/videos/sabor_do_mar.mp4" type="video/mp4">
         O seu navegador não suporta vídeos em HTML5.
     </video>
 
@@ -109,7 +109,7 @@ if (isset($conn)) {
     <header class="sticky-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="sabor_do_mar2.png" alt="Sabor do Mar Logo">
+                <img src="assets/images/sabor_do_mar2.png" alt="Sabor do Mar Logo">
             </a>
             <nav>
                 <ul class="nav-menu">
