@@ -6,3 +6,7 @@ AuthUserFile /etc/httpd/.htpasswd
 <Files reservas_admin.php>
     Require valid-user
 </Files>
+
+<IfModule mod_mime.c>
+    AddType video/mp4 .mp4
+</IfModule>
