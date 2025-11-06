@@ -3,7 +3,7 @@
 // 1. CONFIGURAÇÃO DA BASE DE DADOS
 // ==============================================================================
 $servername = "localhost";
-$username = "root"; 
+$username = "admin"; 
 $password = "atec123"; 
 $dbname = "sabor_do_mar";
 
