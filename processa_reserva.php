@@ -116,7 +116,6 @@ if (isset($conn)) {
                     <li><a href="index.html">início</a></li>
                     <li><a href="menu.html">MENU</a></li>
                     <li><a href="especiais.html">especiais</a></li>
-                    <li><a href="sobrenos.html">Sobre Nós</a></li>
                     <li><a href="contacto.html">Contacto e Reservas</a></li>
                 </ul>
                 <ul class="nav-icons">
